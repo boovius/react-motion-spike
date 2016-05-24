@@ -1,10 +1,20 @@
 #app {
-  /* example styles -- feel free to remove
-    h1 {
-      color: #444;
+
+  #box {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    position: relative;
+    margin: auto;
+    top: 200px;
+    cursor: pointer;
+
+    .mini {
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+      position: absolute;
+      z-index: -1;
     }
-    p {
-      text-align: center;
-    }
-  */
+  }
 }

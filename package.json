@@ -1,19 +1,21 @@
 {
-  "name": "react-webpack-babel-hmre-boilerplate",
+  "name": "react-motion-spike",
   "version": "1.0.0",
-  "description": "a boilerplate for react, webpack, babel, es2015, mocha, and hot mod replacement",
+  "description": "a spike on react project with react-motion",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/boovius/react-webpack-babel-hmre-boilerplate.git"
+    "url": "git+ssh://git@github.com/boovius/.git"
   },
   "main": "index.js",
   "dependencies": {
     "react": "^15.0.2",
-    "react-dom": "^15.0.2"
+    "react-dom": "^15.0.2",
+    "react-motion": "^0.4.3"
   },
   "devDependencies": {
     "babel-core": "^6.9.0",
     "babel-loader": "^6.2.4",
+    "babel-plugin-transform-object-rest-spread": "^6.8.0",
     "babel-preset-es2015": "^6.9.0",
     "babel-preset-react": "^6.5.0",
     "babel-preset-react-hmre": "^1.1.1",
@@ -39,7 +41,8 @@
     "hot module replacement",
     "mocha",
     "express",
-    "boilerplate"
+    "react-motion",
+    "animation"
   ],
   "author": "boovius",
   "license": "ISC"
