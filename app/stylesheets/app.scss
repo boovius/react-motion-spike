@@ -1,10 +1,13 @@
 #app {
-  /* example styles -- feel free to remove
-    h1 {
-      color: #444;
-    }
-    p {
-      text-align: center;
-    }
-  */
+  position: relative;
+
+  #box {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    position: relative;
+    top: 50px;
+    left: 50px;
+    border-radius: 50%;
+  }
 }
