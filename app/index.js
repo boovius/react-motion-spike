@@ -65,10 +65,16 @@ export default class App extends React.Component {
               style={this.boxStyles(boxSpring)}
             >
               <Motion
-                style={{x: spring(
-                  this.state.open ? 300 : 50,
-                  {stiffness: 60, damping: 13}
-                )}}
+                style={{
+                  offset: spring(
+                    this.state.open ? 300 : 50,
+                    {stiffness: 60, damping: 13}
+                  ),
+                  degrees: spring(
+                    this.state.open ? 0 : 90,
+                    {stiffness: 60, damping: 8}
+                  )
+                }}
               >
                 {(minis) =>
                   <div>
@@ -76,32 +82,36 @@ export default class App extends React.Component {
                       id='mini-1'
                       className='mini'
                       style={{
-                        left: `${minis.x}px`,
-                        top: `${minis.x/6}px`
+                        left: `${minis.offset}px`,
+                        top: `${minis.offset/6}px`,
+                        transform: `rotate(${minis.degrees}deg)`
                       }}
                     ></div>
                     <div
                       id='mini-2'
                       className='mini'
                       style={{
-                        left: `${minis.x/6}px`,
-                        top: `${minis.x}px`
+                        left: `${minis.offset*2/3}px`,
+                        top: `${minis.offset}px`,
+                        transform: `rotate(${minis.degrees}deg)`
                       }}
                     ></div>
                     <div
                       id='mini-3'
                       className='mini'
                       style={{
-                        left: `${minis.x/6}px`,
-                        bottom: `${minis.x}px`
+                        right: `${minis.offset*2/3}px`,
+                        top: `${minis.offset}px`,
+                        transform: `rotate(${minis.degrees}deg)`
                       }}
                     ></div>
                     <div
                       id='mini-4'
                       className='mini'
                       style={{
-                        right: `${minis.x}px`,
-                        top: `${minis.x/6}px`
+                        right: `${minis.offset}px`,
+                        top: `${minis.offset/6}px`,
+                        transform: `rotate(${minis.degrees}deg)`
                       }}
                     ></div>
                   </div>
